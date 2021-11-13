@@ -1,0 +1,145 @@
+@font-face {
+    font-family: 'Dancing_Script';
+    src: url('fonts/Dancing_Script/DancingScript-VariableFont_wght.ttf');
+}
+
+@font-face {
+    font-family: 'Zen_Maru_Gothic';
+    src: url('fonts/Zen_Maru_Gothic/ZenMaruGothic-Black.ttf');
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    width: 100%;
+    height: 100%;
+}
+
+body{
+    background-image: url('../images/background.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    font-size: 1.3em;
+    color: white;
+    font-family: 'Zen_Maru_Gothic';
+    text-align: center;
+}
+
+.wrapper{
+    max-width: 450px;
+    height:90vh;
+    background-image: url('../images/wrapperbg.jpg');
+    background-attachment:local;
+    background-size: cover;
+    position:fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    perspective: 5000px;
+}
+
+.cover{
+    width: 100%;
+    height: 100%;
+    position:absolute;
+    background-image: url('../images/cover-background.jpg');
+    background-attachment:initial;
+    background-size: cover;
+    transform: rotateY(0);
+    transform-style: preserve-3d;
+    transform-origin: left;
+    transition: all .5s ease-in;
+    
+}
+/* .cover:hover{
+    transform: rotateY(-180deg);
+} */
+
+.wrapper:hover .cover{
+    transform: rotateY(-180deg);
+}
+
+figure{
+    margin: 0;
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+/* figure.front{
+
+} */
+
+figure.back{
+    background: url('../images/coverback-bg.png');
+    transform: rotateY(180deg);
+    background-attachment:local;
+    background-size: cover;
+}
+
+.doll-img{
+    width: 100%;
+    margin: 40px 0 20px;
+}
+
+.front-txt{
+    margin: 20px 30px 0;
+    font-size: 1.6rem;
+}
+
+.back-txt1{
+    padding: 30px 30px;
+}
+
+.back-title{
+    font-family: 'Dancing_Script';
+    font-size: 2.5em;
+    padding-bottom: 30px;
+}
+
+.back-txt2{
+    padding: 0 25px 30px;
+}
+
+.map-anc{
+    padding: 0 25px 30px;
+    color: moccasin;
+}
+
+.wrapper iframe {
+    width: 80%;
+}
+
+.btn-link{
+    margin: 30px;
+    padding: 5px 15px;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    color:rgb(255, 255, 255);
+    display:inline-flex;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 5px;
+    background-color: rgb(28, 0, 53);
+    box-shadow: 0px 10px 9px -9px #000000;
+    transition: .4s;
+}
+
+.btn-img{
+    margin-right: 15px;
+}
+
+.btn-link:hover{
+    background-color: rgb(50, 3, 92);
+    box-shadow: 0px 10px 9px -8px #000000;
+}
+
+.int{
+    height: 300px;
+}
